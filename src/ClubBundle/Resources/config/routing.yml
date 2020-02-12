@@ -1,0 +1,7 @@
+club_homepage:
+    path:     /
+    defaults: { _controller: ClubBundle:Default:index }
+
+delete:
+    path:     /delete{id}
+    defaults: { _controller: ClubBundle:club:delete }

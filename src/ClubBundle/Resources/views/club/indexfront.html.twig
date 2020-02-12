@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+    <h1>Clubs list</h1>
+
+    <table class="table table-striped table-bordered nowrap dataTable">
+        <thead>
+            <tr>
+                <th>Idclub</th>
+                <th>Nom du club</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for club in clubs %}
+            <tr>
+                <td><a href="{{ path('club_show', { 'idclub': club.idclub }) }}">{{ club.idclub }}</a></td>
+                <td>{{ club.nomclub }}</td>
+                <td>
+                    <ul>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

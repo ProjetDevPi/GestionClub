@@ -1,0 +1,41 @@
+{% extends 'back.html.twig' %}
+
+{% block container %}
+    <h1>Equipements list</h1>
+
+    <table class="table table-striped table-bordered nowrap dataTable">
+        <thead>
+            <tr>
+                <th>Ideq</th>
+                <th>Nom</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equipement in equipements %}
+            <tr>
+                <td><a href="{{ path('equipement_show', { 'ideq': equipement.ideq }) }}">{{ equipement.ideq }}</a></td>
+                <td>{{ equipement.nom }}</td>
+                <td>{{ equipement.type }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('equipement_show', { 'ideq': equipement.ideq }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('equipement_edit', { 'ideq': equipement.ideq }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipement_new') }}">Create a new equipement</a>
+        </li>
+    </ul>
+{% endblock %}

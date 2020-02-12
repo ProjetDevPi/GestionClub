@@ -1,0 +1,35 @@
+{% extends 'back.html.twig' %}
+
+{% block container %}
+    <h1>Club</h1>
+
+    <table class="table table-striped table-bordered nowrap dataTable">
+        <tbody>
+            <tr>
+                <th>Idclub</th>
+                <td>{{ club.idclub }}</td>
+            </tr>
+            <tr>
+                <th>Nomclub</th>
+                <td>{{ club.nomclub }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('club_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('club_edit', { 'idclub': club.idclub }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+        <li>
+            <a href="{{ path('delete', { 'idclub': club.idclub }) }}">delete</a>
+        </li>
+    </ul>
+{% endblock %}

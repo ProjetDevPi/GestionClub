@@ -1,0 +1,21 @@
+{% extends 'back.html.twig' %}
+
+{% block container %}
+    <h1>Club edit</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('delete', { 'idclub': club.idclub }) }}"> delete </a>
+        </li>
+        <li>
+            <a href="{{ path('club_index') }}"> Back to the list </a>
+        </li>
+
+    </ul>
+
+{% endblock %}
