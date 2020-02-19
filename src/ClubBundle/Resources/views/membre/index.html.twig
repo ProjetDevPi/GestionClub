@@ -1,0 +1,38 @@
+{% extends 'back.html.twig' %}
+
+{% block container %}
+    <h1>Membres list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for membre in membres %}
+            <tr>
+                <td><a href="{{ path('membre_show', { 'id': membre.id }) }}"></a>Le membre {{ membre.idUser }} s'est inscrit dans le club {{ membre.idclub.nomclub }}</td>
+                <td>
+                    <ul>
+                        <th>
+                            <a href="{{ path('membre_show', { 'id': membre.id }) }}">show</a>
+                        </th>
+                        <th>
+                            <a href="{{ path('membre_edit', { 'id': membre.id }) }}">edit</a>
+                        </th>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('membre_new') }}">Create a new membre</a>
+        </li>
+    </ul>
+{% endblock %}

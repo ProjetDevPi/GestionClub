@@ -1,0 +1,24 @@
+club_equipement:
+    resource: "@ClubBundle/Controller/EquipementController.php"
+    type:     annotation
+
+club_club:
+    resource: "@ClubBundle/Controller/ClubController.php"
+    type:     annotation
+
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+delete:
+    path:     /delete{idclub}
+    defaults: { _controller: ClubBundle:club:delete }

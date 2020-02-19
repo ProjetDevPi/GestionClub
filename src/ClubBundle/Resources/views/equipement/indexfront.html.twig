@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+
+    <h1><center>Equipements list</center></h1>
+
+    <table class="table table-striped table-bordered nowrap dataTable">
+        <thead>
+        <tr>
+            <th>Id Equipement</th>
+            <th>Nom</th>
+            <th>Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for equipement in equipement %}
+            <tr>
+                <td><a href="{{ path('equipement_show', { 'ideq': equipement.ideq }) }}">{{ equipement.ideq }}</a></td>
+                <td>{{ equipement.nom }}</td>
+                <td>{{ equipement.type }}</td>
+
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
