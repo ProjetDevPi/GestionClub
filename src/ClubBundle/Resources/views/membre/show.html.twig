@@ -1,28 +1,32 @@
-{% extends 'base.html.twig' %}
+{% extends 'back.html.twig' %}
 
 {% block container %}
-    <h1>Membre</h1>
-
-    <table>
-        <tbody>
+<div class="card-header">
+    <h5>Validation de la participation</h5>
+</div>
+<div class="card-block table-border-styler">
+    <div class="table-responsive">
+        <table class="table table-styling table-hover table-striped table-primary">
+            <thead>
             <tr>
-                <th>Id</th>
-                <td>{{ membre.id }}</td>
+                <th>l'Identifient du membre est {{ membre.id }}</th>
             </tr>
-        </tbody>
-    </table>
+            </thead>
 
     <ul>
-        <li>
-            <a href="{{ path('membre_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('membre_edit', { 'id': membre.id }) }}">Edit</a>
-        </li>
-        <li>
+        <th>
+           {# <a href="{{ path('membre_mail') }}">Valider et envoyer formulaire</a>#}
+        </th>
+        <th>
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
-        </li>
+        </th>
     </ul>
+            <li>
+                <a href="{{ path('membre_index') }}">Back to the list</a>
+            </li>
+        </table>
+    </div>
+</div>
 {% endblock %}

@@ -1,10 +1,12 @@
 <?php
 
 namespace ClubBundle\Form;
-
+use ClubBundle\Entity\Membre;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use ClubBundle\Entity\eleve;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class MembreType extends AbstractType
 {

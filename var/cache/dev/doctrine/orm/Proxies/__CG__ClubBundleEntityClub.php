@@ -64,10 +64,10 @@ class Club extends \ClubBundle\Entity\Club implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'idclub', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'nomclub'];
+            return ['__isInitialized__', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'idclub', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'nomclub', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'cap'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'idclub', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'nomclub'];
+        return ['__isInitialized__', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'idclub', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'nomclub', '' . "\0" . 'ClubBundle\\Entity\\Club' . "\0" . 'cap'];
     }
 
     /**
@@ -173,6 +173,28 @@ class Club extends \ClubBundle\Entity\Club implements \Doctrine\ORM\Proxy\Proxy
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function getCap()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCap', []);
+
+        return parent::getCap();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCap($cap)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCap', [$cap]);
+
+        return parent::setCap($cap);
+    }
+
     /**
      * {@inheritDoc}
      */

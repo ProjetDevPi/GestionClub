@@ -6,30 +6,30 @@
     <table class="table table-striped table-bordered nowrap dataTable">
         <tbody>
             <tr>
-                <th>Idclub</th>
+                <th>Id du club</th>
                 <td>{{ club.idclub }}</td>
             </tr>
             <tr>
-                <th>Nomclub</th>
+                <th>Nom du club</th>
                 <td>{{ club.nomclub }}</td>
+            </tr>
+            <tr>
+                <th>capacite de membre</th>
+                <td>{{ club.cap }}</td>
             </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('club_index') }}">Back to the list</a>
+            <a href="{{ path('club_index') }}" class="btn btn-inline" >Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('club_edit', { 'idclub': club.idclub }) }}">Edit</a>
+            <a href="{{ path('club_edit', { 'idclub': club.idclub }) }}"class="btn btn-out-dashed btn-success">Edit</a>
         </li>
+
         <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-        <li>
-            <a href="{{ path('delete', { 'idclub': club.idclub }) }}">delete</a>
+            <a href="{{ path('delete', { 'idclub': club.idclub }) }}"class="btn btn-out-dashed btn-danger">Delete</a>
         </li>
     </ul>
 {% endblock %}

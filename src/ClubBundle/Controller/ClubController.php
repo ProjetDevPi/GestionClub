@@ -31,20 +31,39 @@ class ClubController extends Controller
             'clubs' => $clubs,
         ));
     }
+
     /**
-     * Lists all club entities.
      *
      * @Route("/indexfront", name="clubfront_index")
      * @Method("GET")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexfrontAction()
+    public function indexfrontAction(Request $request)
     {
+
         $em = $this->getDoctrine()->getManager();
 
         $clubs = $em->getRepository('ClubBundle:Club')->findAll();
 
+        if($request->getMethod() == Request::METHOD_GET) {
+            $name = $request->get('filter');
+            $clubs = $this->getDoctrine()->getRepository(Club::class)->mefind($name);
+        }
+
+        $query=$clubs;
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $query,
+            $request->query->getInt('page',1),
+            $request->query->getInt('limit',4)
+        );
+
         return $this->render('@Club/club/indexfront.html.twig', array(
-            'clubs' => $clubs,
+            'clubs' => $result,
         ));
     }
 
@@ -147,4 +166,7 @@ class ClubController extends Controller
             ->getForm()
         ;
     }
+
+
+
 }

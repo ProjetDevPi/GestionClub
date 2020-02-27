@@ -10,4 +10,5 @@ namespace ClubBundle\Repository;
  */
 class EquipementRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }

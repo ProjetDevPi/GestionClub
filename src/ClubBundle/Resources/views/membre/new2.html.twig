@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+
+<select name="karim">
+
+
+
+    {%  for e in eleves %}
+
+    <option>
+        {{ e.nom }}
+    </option>
+
+    {% endfor %}
+</select>
+    <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+
+
+
+{% endblock %}

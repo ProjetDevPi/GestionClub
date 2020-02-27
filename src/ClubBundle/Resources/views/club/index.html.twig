@@ -8,6 +8,7 @@
             <tr>
                 <th>Id du club</th>
                 <th>Nom du club</th>
+                <th>Capacite membre</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -16,13 +17,14 @@
             <tr>
                 <td><a href="{{ path('club_show', { 'idclub': club.idclub }) }}">{{ club.idclub }}</a></td>
                 <td>{{ club.nomclub }}</td>
+                <td>{{ club.cap }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('club_show', { 'idclub': club.idclub }) }}">show</a>
+                            <a href="{{ path('club_show', { 'idclub': club.idclub }) }}"class="btn btn-out-dashed btn-dark">Show</a>
                         </li>
                         <li>
-                            <a href="{{ path('club_edit', { 'idclub': club.idclub }) }}">edit</a>
+                            <a href="{{ path('club_edit', { 'idclub': club.idclub }) }}" class="btn btn-out-dashed btn-success">Edit</a>
                         </li>
                     </ul>
                 </td>
@@ -33,7 +35,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('club_new') }}">Create a new club</a>
+            <a href="{{ path('club_new') }}"class="btn btn-inline">Create a new club</a>
         </li>
     </ul>
 {% endblock %}

@@ -1,3 +1,7 @@
+club_membre:
+    resource: "@ClubBundle/Controller/MembreController.php"
+    type:     annotation
+
 club_equipement:
     resource: "@ClubBundle/Controller/EquipementController.php"
     type:     annotation
@@ -6,11 +10,9 @@ club_club:
     resource: "@ClubBundle/Controller/ClubController.php"
     type:     annotation
 
-
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /
-
 
 app:
     resource: '@AppBundle/Controller/'
@@ -22,3 +24,19 @@ fos_user:
 delete:
     path:     /delete{idclub}
     defaults: { _controller: ClubBundle:club:delete }
+
+del1:
+    path:     /del1/{id}
+    defaults: { _controller: ClubBundle:Membre:del1 }
+
+new2:
+    path:     /new2/{idclub}
+    defaults:  {_controller: ClubBundle:Membre:new2 }
+
+indexfront:
+    path:     /indexfront
+    defaults:  {_controller: ClubBundle:Membre:indexfront }
+
+mail:
+    path:     /mail/{id}
+    defaults: { _controller: ClubBundle:Membre:mail }

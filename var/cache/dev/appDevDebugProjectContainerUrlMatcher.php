@@ -107,7 +107,60 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/equipement')) {
+        elseif (0 === strpos($pathinfo, '/membre')) {
+            // membre_index
+            if ('/membre' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'ClubBundle\\Controller\\MembreController::indexAction',  '_route' => 'membre_index',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_membre_index;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'membre_index'));
+                }
+
+                return $ret;
+            }
+            not_membre_index:
+
+            // membre_new
+            if ('/membre/new' === $pathinfo) {
+                return array (  '_controller' => 'ClubBundle\\Controller\\MembreController::newAction',  '_route' => 'membre_new',);
+            }
+
+            // membre_edit
+            if (preg_match('#^/membre/(?P<id>[^/]++)/edit$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'membre_edit']), array (  '_controller' => 'ClubBundle\\Controller\\MembreController::editAction',));
+            }
+
+            // membre
+            if (0 === strpos($pathinfo, '/membre/Membre') && preg_match('#^/membre/Membre/(?P<idclub>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'membre']), array (  '_controller' => 'ClubBundle\\Controller\\MembreController::MembreAction',));
+            }
+
+            // membre_delete
+            if (preg_match('#^/membre/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'membre_delete']), array (  '_controller' => 'ClubBundle\\Controller\\MembreController::deleteAction',));
+            }
+
+            // membre_show
+            if (0 === strpos($pathinfo, '/membremembre_show') && preg_match('#^/membremembre_show/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'membre_show']), array (  '_controller' => 'ClubBundle\\Controller\\MembreController::showAction',));
+            }
+
+            // membrefront_index
+            if ('/membre/indexfront' === $pathinfo) {
+                return array (  '_controller' => 'ClubBundle\\Controller\\MembreController::indexfrontAction',  '_route' => 'membrefront_index',);
+            }
+
+        }
+
+        // mail
+        if (0 === strpos($pathinfo, '/mail') && preg_match('#^/mail/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'mail']), array (  '_controller' => 'ClubBundle\\Controller\\MembreController::mailAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/equipement')) {
             // equipement_index
             if ('/equipement' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'ClubBundle\\Controller\\EquipementController::indexAction',  '_route' => 'equipement_index',);
@@ -122,6 +175,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $ret;
             }
             not_equipement_index:
+
+            // equipement_pdf
+            if ('/equipement/pdf' === $pathinfo) {
+                return array (  '_controller' => 'ClubBundle\\Controller\\EquipementController::pdfAction',  '_route' => 'equipement_pdf',);
+            }
+
+            // equipementfront_index
+            if (preg_match('#^/equipement/(?P<idclub>[^/]++)/indexfront$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'equipementfront_index']), array (  '_controller' => 'ClubBundle\\Controller\\EquipementController::indexfrontAction',));
+            }
 
             // equipement_new
             if ('/equipement/new' === $pathinfo) {
@@ -423,6 +486,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // delete
         if (0 === strpos($pathinfo, '/delete') && preg_match('#^/delete(?P<idclub>[^/]++)$#sD', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, ['_route' => 'delete']), array (  '_controller' => 'ClubBundle\\Controller\\clubController::deleteAction',));
+        }
+
+        // del1
+        if (0 === strpos($pathinfo, '/del1') && preg_match('#^/del1/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'del1']), array (  '_controller' => 'ClubBundle\\Controller\\MembreController::del1Action',));
+        }
+
+        // new2
+        if (0 === strpos($pathinfo, '/new2') && preg_match('#^/new2/(?P<idclub>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'new2']), array (  '_controller' => 'ClubBundle\\Controller\\MembreController::new2Action',));
+        }
+
+        // indexfront
+        if ('/indexfront' === $pathinfo) {
+            return array (  '_controller' => 'ClubBundle\\Controller\\MembreController::indexfrontAction',  '_route' => 'indexfront',);
         }
 
         if ('/' === $pathinfo && !$allow) {

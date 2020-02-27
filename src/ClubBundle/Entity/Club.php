@@ -28,6 +28,27 @@ class Club
      */
     private $nomclub;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $cap;
+
+    /**
+     * @return mixed
+     */
+    public function getCap()
+    {
+        return $this->cap;
+    }
+
+    /**
+     * @param mixed $cap
+     */
+    public function setCap($cap)
+    {
+        $this->cap = $cap;
+    }
+
 
     /**
      * Get idclub
@@ -62,5 +83,6 @@ class Club
     {
         return $this->nomclub;
     }
+
 }
 

@@ -6,7 +6,7 @@
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">app</parameter>
-    <parameter key="kernel.cache_dir">C:\wamp64\www\kidoPI-DEV\var\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">C:/wamp64/www/kidoPI-DEV/var/cache/dev</parameter>
     <parameter key="kernel.logs_dir">C:\wamp64\www\kidoPI-DEV\var\logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
@@ -20,6 +20,8 @@
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="UserBundle">UserBundle\UserBundle</parameter>
       <parameter key="ClubBundle">ClubBundle\ClubBundle</parameter>
+      <parameter key="NomayaSocialBundle">Nomaya\SocialBundle\NomayaSocialBundle</parameter>
+      <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -82,6 +84,16 @@
         <parameter key="path">C:\wamp64\www\kidoPI-DEV\src\ClubBundle</parameter>
         <parameter key="namespace">ClubBundle</parameter>
       </parameter>
+      <parameter key="NomayaSocialBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\kidoPI-DEV\vendor\nomaya\social-bundle\Nomaya\SocialBundle</parameter>
+        <parameter key="namespace">Nomaya\SocialBundle</parameter>
+      </parameter>
+      <parameter key="KnpPaginatorBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle</parameter>
+        <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
+      </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
         <parameter key="path">C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle</parameter>
@@ -117,13 +129,13 @@
     <parameter key="database_name">projet</parameter>
     <parameter key="database_user">root</parameter>
     <parameter key="database_password">null</parameter>
-    <parameter key="mailer_transport">smtp</parameter>
-    <parameter key="mailer_host">127.0.0.1</parameter>
-    <parameter key="mailer_user">null</parameter>
-    <parameter key="mailer_password">null</parameter>
+    <parameter key="mailer_transport">gmail</parameter>
+    <parameter key="mailer_host">smtp.gmail.com</parameter>
+    <parameter key="mailer_user">karim.bentarjem.1@esprit.tn</parameter>
+    <parameter key="mailer_password">kk23120085</parameter>
     <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
     <parameter key="locale">fr</parameter>
-    <parameter key="fragment.renderer.hinclude.global_template"></parameter>
+    <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">ThisTokenIsNotSoSecretChangeIt</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
@@ -144,16 +156,24 @@
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
     <parameter key="asset.request_context.base_path"></parameter>
     <parameter key="asset.request_context.secure">false</parameter>
+    <parameter key="templating.loader.cache.path">null</parameter>
+    <parameter key="templating.engines" type="collection">
+      <parameter>twig</parameter>
+      <parameter>php</parameter>
+    </parameter>
+    <parameter key="templating.helper.form.resources" type="collection">
+      <parameter>FrameworkBundle:Form</parameter>
+    </parameter>
     <parameter key="validator.mapping.cache.prefix"></parameter>
-    <parameter key="validator.mapping.cache.file">C:\wamp64\www\kidoPI-DEV\var\cache\dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:/wamp64/www/kidoPI-DEV/var/cache/dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="translator.logging">true</parameter>
     <parameter key="translator.default_path">C:\wamp64\www\kidoPI-DEV/translations</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:\wamp64\www\kidoPI-DEV\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:/wamp64/www/kidoPI-DEV/var/cache/dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\wamp64\www\kidoPI-DEV\var\cache\dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:/wamp64/www/kidoPI-DEV/var/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="router.options.generator_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\PhpGeneratorDumper</parameter>
@@ -223,16 +243,16 @@
     <parameter key="swiftmailer.email_sender.listener.class">Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener</parameter>
     <parameter key="swiftmailer.data_collector.class">Symfony\Bundle\SwiftmailerBundle\DataCollector\MessageDataCollector</parameter>
     <parameter key="swiftmailer.mailer.default.transport.name">smtp</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">null</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.port">25</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.host">127.0.0.1</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.username">null</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.password">null</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">ssl</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.port">465</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.host">smtp.gmail.com</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.username">karim.bentarjem.1@esprit.tn</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.password">kk23120085</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">login</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.local_domain">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">C:\wamp64\www\kidoPI-DEV\var\cache\dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">C:/wamp64/www/kidoPI-DEV/var/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -351,7 +371,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:\wamp64\www\kidoPI-DEV\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:/wamp64/www/kidoPI-DEV/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="fos_user.backend_type_orm">true</parameter>
     <parameter key="fos_user.security.interactive_login_listener.class">FOS\UserBundle\EventListener\LastLoginListener</parameter>
@@ -361,7 +381,7 @@
     <parameter key="fos_user.storage">orm</parameter>
     <parameter key="fos_user.firewall_name">main</parameter>
     <parameter key="fos_user.model_manager_name">null</parameter>
-    <parameter key="fos_user.model.user.class">AppBundle\Entity\User</parameter>
+    <parameter key="fos_user.model.user.class">ClubBundle\Entity\User</parameter>
     <parameter key="fos_user.profile.form.type">FOS\UserBundle\Form\Type\ProfileFormType</parameter>
     <parameter key="fos_user.profile.form.name">fos_user_profile_form</parameter>
     <parameter key="fos_user.profile.form.validation_groups" type="collection">
@@ -395,6 +415,59 @@
       <parameter>ResetPassword</parameter>
       <parameter>Default</parameter>
     </parameter>
+    <parameter key="buttons.facebook" type="collection">
+      <parameter key="url">null</parameter>
+      <parameter key="locale">fr_FR</parameter>
+      <parameter key="send">false</parameter>
+      <parameter key="width">300</parameter>
+      <parameter key="showFaces">true</parameter>
+      <parameter key="layout">button_count</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="buttons.twitter" type="collection">
+      <parameter key="url">null</parameter>
+      <parameter key="locale">fr</parameter>
+      <parameter key="message">Je veux partager ça avec vous !</parameter>
+      <parameter key="text">Tweet</parameter>
+      <parameter key="via">L'Equipe KIDO's.com</parameter>
+      <parameter key="tag">ttot</parameter>
+      <parameter key="showFaces">false</parameter>
+      <parameter key="send">true</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="buttons.googleplus" type="collection">
+      <parameter key="url">null</parameter>
+      <parameter key="locale">fr</parameter>
+      <parameter key="size">medium</parameter>
+      <parameter key="annotation">bubble</parameter>
+      <parameter key="width">300</parameter>
+      <parameter key="showFaces">false</parameter>
+      <parameter key="send">true</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="buttons.linkedin" type="collection">
+      <parameter key="url">null</parameter>
+      <parameter key="locale">fr_FR</parameter>
+      <parameter key="counter">right</parameter>
+      <parameter key="showFaces">false</parameter>
+      <parameter key="send">true</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="buttons.pinterest" type="collection">
+      <parameter key="url">null</parameter>
+      <parameter key="locale">fr</parameter>
+      <parameter key="showFaces">false</parameter>
+      <parameter key="send">true</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="social.theme">default</parameter>
+    <parameter key="knp_paginator.class">Knp\Component\Pager\Paginator</parameter>
+    <parameter key="knp_paginator.helper.processor.class">Knp\Bundle\PaginatorBundle\Helper\Processor</parameter>
+    <parameter key="knp_paginator.templating.helper.pagination.class">Knp\Bundle\PaginatorBundle\Templating\PaginationHelper</parameter>
+    <parameter key="knp_paginator.template.pagination">@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig</parameter>
+    <parameter key="knp_paginator.template.filtration">@KnpPaginator/Pagination/filtration.html.twig</parameter>
+    <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig</parameter>
+    <parameter key="knp_paginator.page_range">5</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -739,9 +812,9 @@
     </service>
     <service id="fragment.renderer.hinclude" class="Symfony\Component\HttpKernel\Fragment\HIncludeFragmentRenderer">
       <tag name="kernel.fragment_renderer" alias="hinclude"/>
-      <argument type="service" id="twig"/>
+      <argument type="service" id="templating.engine.delegating"/>
       <argument type="service" id="uri_signer"/>
-      <argument></argument>
+      <argument>null</argument>
       <call method="setFragmentPath">
         <argument>/_fragment</argument>
       </call>
@@ -941,7 +1014,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/pools</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -970,7 +1043,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/pools</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1058,7 +1131,7 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/sessions</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -1315,13 +1388,159 @@
       <argument type="service" id="assets.empty_version_strategy"/>
       <argument type="service" id="assets.context"/>
     </service>
+    <service id="templating.engine.delegating" class="Symfony\Bundle\FrameworkBundle\Templating\DelegatingEngine" public="false">
+      <argument type="service" id="service_container"/>
+      <argument type="collection"/>
+      <call method="addEngine">
+        <argument type="service" id="templating.engine.twig"/>
+      </call>
+      <call method="addEngine">
+        <argument type="service" id="templating.engine.php"/>
+      </call>
+    </service>
+    <service id="templating.name_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateNameParser">
+      <argument type="service" id="kernel"/>
+    </service>
+    <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
+    <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
+      <argument type="service" id="file_locator"/>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev</argument>
+    </service>
+    <service id="templating.finder" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
+      <argument type="service" id="kernel"/>
+      <argument type="service" id="templating.filename_parser"/>
+      <argument>C:\wamp64\www\kidoPI-DEV\app/Resources</argument>
+    </service>
+    <service id="templating.cache_warmer.template_paths" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer" public="false">
+      <tag name="kernel.cache_warmer" priority="20"/>
+      <argument type="service" id="templating.finder"/>
+      <argument type="service" id="templating.locator"/>
+    </service>
+    <service id="templating.loader.filesystem" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\FilesystemLoader" public="false">
+      <argument type="service" id="templating.locator"/>
+    </service>
+    <service id="templating.loader.cache" class="Symfony\Component\Templating\Loader\CacheLoader" public="false">
+      <tag name="monolog.logger" channel="templating"/>
+      <argument type="service" id="templating.loader.wrapped"/>
+      <argument>null</argument>
+      <call method="setLogger">
+        <argument type="service" id="monolog.logger.templating" on-invalid="ignore"/>
+      </call>
+    </service>
+    <service id="templating.loader.chain" class="Symfony\Component\Templating\Loader\ChainLoader" public="false">
+      <tag name="monolog.logger" channel="templating"/>
+      <call method="setLogger">
+        <argument type="service" id="monolog.logger.templating" on-invalid="ignore"/>
+      </call>
+    </service>
+    <service id="templating.engine.php" class="Symfony\Bundle\FrameworkBundle\Templating\TimedPhpEngine" public="false">
+      <argument type="service" id="templating.name_parser"/>
+      <argument type="service" id="templating.engine.php.helpers_locator"/>
+      <argument type="service" id="templating.loader.filesystem"/>
+      <argument type="service" id="debug.stopwatch"/>
+      <argument type="service" id="templating.globals"/>
+      <call method="setCharset">
+        <argument>UTF-8</argument>
+      </call>
+      <call method="setHelpers">
+        <argument type="collection">
+          <argument key="slots">templating.helper.slots</argument>
+          <argument key="request">templating.helper.request</argument>
+          <argument key="session">templating.helper.session</argument>
+          <argument key="router">templating.helper.router</argument>
+          <argument key="assets">templating.helper.assets</argument>
+          <argument key="actions">templating.helper.actions</argument>
+          <argument key="code">templating.helper.code</argument>
+          <argument key="translator">templating.helper.translator</argument>
+          <argument key="form">templating.helper.form</argument>
+          <argument key="stopwatch">templating.helper.stopwatch</argument>
+          <argument key="logout_url">templating.helper.logout_url</argument>
+          <argument key="security">templating.helper.security</argument>
+          <argument key="social-buttons">nomaya.socialBarHelper</argument>
+          <argument key="social-links">nomaya.socialLinksHelper</argument>
+          <argument key="knp_pagination">knp_paginator.templating.helper.pagination</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="templating.engine.php.helpers_locator" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="knp_paginator.templating.helper.pagination" type="service" id="knp_paginator.templating.helper.pagination"/>
+        <argument key="nomaya.socialBarHelper" type="service" id="nomaya.socialBarHelper"/>
+        <argument key="nomaya.socialLinksHelper" type="service" id="nomaya.socialLinksHelper"/>
+        <argument key="templating.helper.actions" type="service" id="templating.helper.actions"/>
+        <argument key="templating.helper.assets" type="service" id="templating.helper.assets"/>
+        <argument key="templating.helper.code" type="service" id="templating.helper.code"/>
+        <argument key="templating.helper.form" type="service" id="templating.helper.form"/>
+        <argument key="templating.helper.logout_url" type="service" id="templating.helper.logout_url"/>
+        <argument key="templating.helper.request" type="service" id="templating.helper.request"/>
+        <argument key="templating.helper.router" type="service" id="templating.helper.router"/>
+        <argument key="templating.helper.security" type="service" id="templating.helper.security"/>
+        <argument key="templating.helper.session" type="service" id="templating.helper.session"/>
+        <argument key="templating.helper.slots" type="service" id="templating.helper.slots"/>
+        <argument key="templating.helper.stopwatch" type="service" id="templating.helper.stopwatch"/>
+        <argument key="templating.helper.translator" type="service" id="templating.helper.translator"/>
+      </argument>
+    </service>
+    <service id="templating.helper.slots" class="Symfony\Component\Templating\Helper\SlotsHelper">
+      <tag name="templating.helper" alias="slots"/>
+    </service>
+    <service id="templating.helper.request" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\RequestHelper">
+      <tag name="templating.helper" alias="request"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="templating.helper.session" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\SessionHelper">
+      <tag name="templating.helper" alias="session"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="templating.helper.router" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\RouterHelper">
+      <tag name="templating.helper" alias="router"/>
+      <argument type="service" id="router.default"/>
+    </service>
+    <service id="templating.helper.assets" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\AssetsHelper">
+      <tag name="templating.helper" alias="assets"/>
+      <argument type="service" id="assets.packages"/>
+    </service>
+    <service id="templating.helper.actions" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\ActionsHelper">
+      <tag name="templating.helper" alias="actions"/>
+      <argument type="service" id="fragment.handler"/>
+    </service>
+    <service id="templating.helper.code" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\CodeHelper">
+      <tag name="templating.helper" alias="code"/>
+      <argument type="service" id="debug.file_link_formatter"/>
+      <argument>C:\wamp64\www\kidoPI-DEV</argument>
+      <argument>UTF-8</argument>
+    </service>
+    <service id="templating.helper.translator" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\TranslatorHelper">
+      <tag name="templating.helper" alias="translator"/>
+      <argument type="service" id="translator.data_collector"/>
+    </service>
+    <service id="templating.helper.form" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\FormHelper">
+      <tag name="templating.helper" alias="form"/>
+      <argument type="service" id="templating.form.renderer"/>
+    </service>
+    <service id="templating.helper.stopwatch" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\StopwatchHelper">
+      <tag name="templating.helper" alias="stopwatch"/>
+      <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
+    </service>
+    <service id="templating.form.engine" class="Symfony\Component\Form\Extension\Templating\TemplatingRendererEngine" public="false">
+      <argument type="service" id="templating.engine.php"/>
+      <argument>%templating.helper.form.resources%</argument>
+    </service>
+    <service id="templating.form.renderer" class="Symfony\Component\Form\FormRenderer" public="false">
+      <argument type="service" id="templating.form.engine"/>
+      <argument type="service" id="security.csrf.token_manager" on-invalid="null"/>
+    </service>
+    <service id="templating.globals" class="Symfony\Bundle\FrameworkBundle\Templating\GlobalVariables">
+      <argument type="service" id="service_container"/>
+    </service>
     <service id="2_ApcCache~52mzs8z" class="Doctrine\Common\Cache\ApcCache" public="false">
       <call method="setNamespace">
         <argument></argument>
       </call>
     </service>
     <service id="1_PhpArrayAdapter~52mzs8z" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/validation.php</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1361,7 +1580,7 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/validation.php</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
     </service>
     <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache" public="false">
@@ -1429,7 +1648,7 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\wamp64\www\kidoPI-DEV\var\cache\dev/translations</argument>
+        <argument key="cache_dir">C:/wamp64/www/kidoPI-DEV/var/cache/dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
@@ -1442,6 +1661,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ar.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ar.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ar.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ar.xliff</argument>
           </argument>
           <argument key="az" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.az.xlf</argument>
@@ -1473,6 +1693,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.cs.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.cs.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.cs.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.cs.xliff</argument>
           </argument>
           <argument key="cy" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cy.xlf</argument>
@@ -1483,6 +1704,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.da.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.da.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.da.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.da.xliff</argument>
           </argument>
           <argument key="de" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.de.xlf</argument>
@@ -1490,6 +1712,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.de.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.de.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.de.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.de.xliff</argument>
           </argument>
           <argument key="el" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.el.xlf</argument>
@@ -1504,6 +1727,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.en.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.en.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.en.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.en.xliff</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.es.xlf</argument>
@@ -1511,6 +1735,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.es.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.es.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.es.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.es.xliff</argument>
           </argument>
           <argument key="et" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.et.xlf</argument>
@@ -1530,6 +1755,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fa.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fa.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fa.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.fa.xliff</argument>
           </argument>
           <argument key="fi" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fi.xlf</argument>
@@ -1543,6 +1769,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fr.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fr.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fr.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.fr.xliff</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.gl.xlf</argument>
@@ -1570,6 +1797,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.hu.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.hu.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.hu.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.hu.xliff</argument>
           </argument>
           <argument key="hy" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.hy.xlf</argument>
@@ -1581,6 +1809,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.id.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.id.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.id.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.id.xliff</argument>
           </argument>
           <argument key="it" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.it.xlf</argument>
@@ -1588,6 +1817,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.it.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.it.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.it.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.it.xliff</argument>
           </argument>
           <argument key="ja" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ja.xlf</argument>
@@ -1595,6 +1825,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ja.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ja.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ja.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ja.xliff</argument>
           </argument>
           <argument key="lb" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lb.xlf</argument>
@@ -1608,6 +1839,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lt.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.lt.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.lt.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.lt.xliff</argument>
           </argument>
           <argument key="lv" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lv.xlf</argument>
@@ -1633,6 +1865,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.nl.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.nl.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.nl.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.nl.xliff</argument>
           </argument>
           <argument key="nn" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nn.xlf</argument>
@@ -1643,6 +1876,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.no.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.no.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.no.xlf</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.no.xliff</argument>
           </argument>
           <argument key="pl" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pl.xlf</argument>
@@ -1650,6 +1884,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pl.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pl.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pl.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.pl.xliff</argument>
           </argument>
           <argument key="pt" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt.xlf</argument>
@@ -1663,6 +1898,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pt_BR.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pt_BR.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pt_BR.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.pt_BR.xliff</argument>
           </argument>
           <argument key="ro" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ro.xlf</argument>
@@ -1670,6 +1906,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ro.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ro.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ro.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ro.xliff</argument>
           </argument>
           <argument key="ru" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ru.xlf</argument>
@@ -1677,6 +1914,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ru.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ru.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ru.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ru.xliff</argument>
           </argument>
           <argument key="sk" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sk.xlf</argument>
@@ -1713,6 +1951,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sv.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sv.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sv.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sv.xliff</argument>
           </argument>
           <argument key="th" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.th.xlf</argument>
@@ -1738,6 +1977,7 @@
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.uk.xlf</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.uk.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.uk.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.uk.xliff</argument>
           </argument>
           <argument key="vi" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.vi.xlf</argument>
@@ -1774,6 +2014,10 @@
           <argument key="ky" type="collection">
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ky.yml</argument>
             <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ky.yml</argument>
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ky.xliff</argument>
+          </argument>
+          <argument key="sw" type="collection">
+            <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sw.xliff</argument>
           </argument>
         </argument>
       </argument>
@@ -2103,7 +2347,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-      <argument>file:C:\wamp64\www\kidoPI-DEV\var\cache\dev/profiler</argument>
+      <argument>file:C:/wamp64/www/kidoPI-DEV/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -2140,7 +2384,7 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/appDevDebugProjectContainer</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/appDevDebugProjectContainer</argument>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
       <tag name="data_collector" template="@WebProfiler/Collector/time.html.twig" id="time" priority="330"/>
@@ -2255,6 +2499,14 @@
         <argument type="collection">
           <argument type="service" id="data_collector.router"/>
           <argument>onKernelController</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>onKernelRequest</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -2420,6 +2672,14 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -2730,6 +2990,46 @@
         </argument>
         <argument>-128</argument>
       </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>before</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sortable"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.filtration"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver">
       <tag name="monolog.logger" channel="request"/>
@@ -2803,7 +3103,7 @@
       <argument type="service" id="service_container"/>
       <argument>C:\wamp64\www\kidoPI-DEV/app/config/routing_dev.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\wamp64\www\kidoPI-DEV\var\cache\dev</argument>
+        <argument key="cache_dir">C:/wamp64/www/kidoPI-DEV/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -2852,7 +3152,7 @@
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\TemplateController" class="Symfony\Bundle\FrameworkBundle\Controller\TemplateController" public="true">
       <argument type="service" id="twig" on-invalid="ignore"/>
-      <argument>null</argument>
+      <argument type="service" id="templating.engine.delegating" on-invalid="ignore"/>
     </service>
     <service id="routing.loader.annotation" class="Symfony\Bundle\FrameworkBundle\Routing\AnnotatedRouteControllerLoader" public="false">
       <tag name="routing.loader" priority="-10"/>
@@ -2869,7 +3169,7 @@
       <argument type="service" id="routing.loader.annotation"/>
     </service>
     <service id="2_PhpArrayAdapter~gzopmfm" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/annotations.php</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -2898,7 +3198,7 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/annotations.php</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
@@ -3588,12 +3888,12 @@
       </call>
     </service>
     <service id="twig" class="Twig\Environment" public="true">
-      <argument type="service" id="twig.loader.native_filesystem"/>
+      <argument type="service" id="twig.loader.filesystem"/>
       <argument type="collection">
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:\wamp64\www\kidoPI-DEV\var\cache\dev/twig</argument>
+        <argument key="cache">C:/wamp64/www/kidoPI-DEV/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
       </argument>
       <call method="addExtension">
@@ -3642,6 +3942,15 @@
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.nomaya_social_bar"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="twig.extension.nomaya_social_links"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="knp_paginator.twig.extension.pagination"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.webprofiler"/>
       </call>
       <call method="addGlobal">
@@ -3671,7 +3980,7 @@
       <tag name="kernel.cache_warmer"/>
       <tag name="container.service_subscriber" id="twig"/>
       <argument type="service" id="service_locator.c7_qahl.twig.cache_warmer"/>
-      <argument>null</argument>
+      <argument type="service" id="templating.finder" on-invalid="ignore"/>
       <argument type="collection">
         <argument key="C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form">null</argument>
       </argument>
@@ -3691,7 +4000,6 @@
       <argument type="service" id="twig.template_iterator"/>
     </service>
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader" public="false">
-      <tag name="twig.loader"/>
       <argument type="collection"/>
       <argument>C:\wamp64\www\kidoPI-DEV</argument>
       <call method="addPath">
@@ -3757,6 +4065,22 @@
       <call method="addPath">
         <argument>C:\wamp64\www\kidoPI-DEV\src\ClubBundle/Resources/views</argument>
         <argument>!Club</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/views</argument>
+        <argument>NomayaSocial</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/views</argument>
+        <argument>!NomayaSocial</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>!KnpPaginator</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
@@ -3883,6 +4207,119 @@
       <tag name="twig.runtime"/>
       <argument type="service" id="twig.form.engine"/>
       <argument type="service" id="security.csrf.token_manager" on-invalid="null"/>
+    </service>
+    <service id="twig.loader.filesystem" class="Symfony\Bundle\TwigBundle\Loader\FilesystemLoader" public="false">
+      <tag name="twig.loader"/>
+      <argument type="service" id="templating.locator"/>
+      <argument type="service" id="templating.name_parser"/>
+      <argument>C:\wamp64\www\kidoPI-DEV</argument>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/views</argument>
+        <argument>Framework</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/views</argument>
+        <argument>!Framework</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle/Resources/views</argument>
+        <argument>Security</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle/Resources/views</argument>
+        <argument>!Security</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle/Resources/views</argument>
+        <argument>Twig</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle/Resources/views</argument>
+        <argument>!Twig</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\swiftmailer-bundle/Resources/views</argument>
+        <argument>Swiftmailer</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\swiftmailer-bundle/Resources/views</argument>
+        <argument>!Swiftmailer</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>!Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/views</argument>
+        <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\friendsofsymfony\user-bundle/Resources/views</argument>
+        <argument>!FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\src\UserBundle/Resources/views</argument>
+        <argument>User</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\src\UserBundle/Resources/views</argument>
+        <argument>!User</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\src\ClubBundle/Resources/views</argument>
+        <argument>Club</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\src\ClubBundle/Resources/views</argument>
+        <argument>!Club</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/views</argument>
+        <argument>NomayaSocial</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/views</argument>
+        <argument>!NomayaSocial</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>!KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
+        <argument>Debug</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
+        <argument>!Debug</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/views</argument>
+        <argument>WebProfiler</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/views</argument>
+        <argument>!WebProfiler</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\app/Resources/views</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\kidoPI-DEV\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form</argument>
+      </call>
+    </service>
+    <service id="templating.engine.twig" class="Symfony\Bundle\TwigBundle\TwigEngine" public="false">
+      <argument type="service" id="twig"/>
+      <argument type="service" id="templating.name_parser"/>
+      <argument type="service" id="templating.locator"/>
     </service>
     <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
       <tag name="console.command" command="debug:twig"/>
@@ -4016,13 +4453,13 @@
         <argument type="service" id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~ai6anyh"/>
       </argument>
       <call method="setUsername">
-        <argument>null</argument>
+        <argument>karim.bentarjem.1@esprit.tn</argument>
       </call>
       <call method="setPassword">
-        <argument>null</argument>
+        <argument>kk23120085</argument>
       </call>
       <call method="setAuthMode">
-        <argument>null</argument>
+        <argument>login</argument>
       </call>
     </service>
     <service id="swiftmailer.mailer.default.transport.buffer" class="Swift_Transport_StreamBuffer" public="false">
@@ -4039,13 +4476,13 @@
       </argument>
       <argument type="service" id="swiftmailer.mailer.default.transport.eventdispatcher"/>
       <call method="setHost">
-        <argument>127.0.0.1</argument>
+        <argument>smtp.gmail.com</argument>
       </call>
       <call method="setPort">
-        <argument>25</argument>
+        <argument>465</argument>
       </call>
       <call method="setEncryption">
-        <argument>null</argument>
+        <argument>ssl</argument>
       </call>
       <call method="setTimeout">
         <argument>30</argument>
@@ -4367,7 +4804,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -4545,7 +4982,7 @@
       <argument type="service" id="fos_user.util.password_updater"/>
       <argument type="service" id="fos_user.util.canonical_fields_updater"/>
       <argument type="service" id="fos_user.object_manager"/>
-      <argument>AppBundle\Entity\User</argument>
+      <argument>ClubBundle\Entity\User</argument>
     </service>
     <service id="fos_user.object_manager" class="Doctrine\Common\Persistence\ObjectManager" public="false">
       <argument>null</argument>
@@ -4601,7 +5038,7 @@
       <tag name="fos_user.requires_swift"/>
       <argument type="service" id="swiftmailer.mailer.default"/>
       <argument type="service" id="router.default"/>
-      <argument type="service" id="templating"/>
+      <argument type="service" id="templating.engine.delegating"/>
       <argument type="collection">
         <argument key="confirmation.template">@FOSUser/Registration/email.txt.twig</argument>
         <argument key="resetting.template">@FOSUser/Resetting/email.txt.twig</argument>
@@ -4695,7 +5132,7 @@
     </service>
     <service id="fos_user.profile.form.type" class="FOS\UserBundle\Form\Type\ProfileFormType">
       <tag name="form.type" alias="fos_user_profile"/>
-      <argument>AppBundle\Entity\User</argument>
+      <argument>ClubBundle\Entity\User</argument>
     </service>
     <service id="fos_user.profile.controller" class="FOS\UserBundle\Controller\ProfileController" public="true">
       <argument type="service" id="debug.event_dispatcher"/>
@@ -4713,7 +5150,7 @@
     </service>
     <service id="fos_user.registration.form.type" class="FOS\UserBundle\Form\Type\RegistrationFormType">
       <tag name="form.type" alias="fos_user_registration"/>
-      <argument>AppBundle\Entity\User</argument>
+      <argument>ClubBundle\Entity\User</argument>
     </service>
     <service id="fos_user.registration.controller" class="FOS\UserBundle\Controller\RegistrationController" public="true">
       <argument type="service" id="debug.event_dispatcher"/>
@@ -4732,7 +5169,7 @@
     </service>
     <service id="fos_user.change_password.form.type" class="FOS\UserBundle\Form\Type\ChangePasswordFormType">
       <tag name="form.type" alias="fos_user_change_password"/>
-      <argument>AppBundle\Entity\User</argument>
+      <argument>ClubBundle\Entity\User</argument>
     </service>
     <service id="fos_user.change_password.controller" class="FOS\UserBundle\Controller\ChangePasswordController" public="true">
       <argument type="service" id="debug.event_dispatcher"/>
@@ -4750,7 +5187,7 @@
     </service>
     <service id="fos_user.resetting.form.type" class="FOS\UserBundle\Form\Type\ResettingFormType">
       <tag name="form.type" alias="fos_user_resetting"/>
-      <argument>AppBundle\Entity\User</argument>
+      <argument>ClubBundle\Entity\User</argument>
     </service>
     <service id="fos_user.listener.resetting" class="FOS\UserBundle\EventListener\ResettingListener">
       <tag name="kernel.event_subscriber"/>
@@ -4767,6 +5204,77 @@
       <call method="setContainer">
         <argument type="service" id="service_container"/>
       </call>
+    </service>
+    <service id="nomaya.socialBarHelper" class="Nomaya\SocialBundle\Helpers\SocialBarHelper">
+      <tag name="templating.helper" alias="social-buttons"/>
+      <argument type="service" id="templating.engine.delegating"/>
+    </service>
+    <service id="twig.extension.nomaya_social_bar" class="Nomaya\SocialBundle\Twig\Extension\NomayaTwigSocialBar">
+      <tag name="twig.extension"/>
+      <argument type="service" id="service_container"/>
+      <call method="setNetworks">
+        <argument type="collection">
+          <argument>facebook</argument>
+          <argument>twitter</argument>
+          <argument>googleplus</argument>
+          <argument>linkedin</argument>
+          <argument>pinterest</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="nomaya.socialLinksHelper" class="Nomaya\SocialBundle\Helpers\SocialLinksHelper">
+      <tag name="templating.helper" alias="social-links"/>
+      <argument type="service" id="templating.engine.delegating"/>
+    </service>
+    <service id="twig.extension.nomaya_social_links" class="Nomaya\SocialBundle\Twig\Extension\NomayaTwigSocialLinks">
+      <tag name="twig.extension"/>
+      <argument type="service" id="service_container"/>
+    </service>
+    <service id="knp_paginator" class="Knp\Component\Pager\Paginator" public="true" lazy="true">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <call method="setDefaultPaginatorOptions">
+        <argument type="collection">
+          <argument key="pageParameterName">page</argument>
+          <argument key="sortFieldParameterName">sort</argument>
+          <argument key="sortDirectionParameterName">direction</argument>
+          <argument key="filterFieldParameterName">filterField</argument>
+          <argument key="filterValueParameterName">filterValue</argument>
+          <argument key="distinct">true</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="knp_paginator.subscriber.paginate" class="Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sortable" class="Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.filtration" class="Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sliding_pagination" class="Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
+      <tag name="container.hot_path"/>
+      <argument type="collection">
+        <argument key="defaultPaginationTemplate">@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig</argument>
+        <argument key="defaultSortableTemplate">@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig</argument>
+        <argument key="defaultFiltrationTemplate">@KnpPaginator/Pagination/filtration.html.twig</argument>
+        <argument key="defaultPageRange">5</argument>
+      </argument>
+    </service>
+    <service id="knp_paginator.helper.processor" class="Knp\Bundle\PaginatorBundle\Helper\Processor">
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="translator.data_collector"/>
+    </service>
+    <service id="knp_paginator.twig.extension.pagination" class="Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="knp_paginator.helper.processor"/>
+    </service>
+    <service id="knp_paginator.templating.helper.pagination" class="Knp\Bundle\PaginatorBundle\Templating\PaginationHelper">
+      <tag name="templating.helper" alias="knp_pagination"/>
+      <argument type="service" id="knp_paginator.helper.processor"/>
+      <argument type="service" id="templating.engine.php"/>
     </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
@@ -4997,6 +5505,21 @@
     </service>
     <service id="monolog.logger.cache" class="Symfony\Bridge\Monolog\Logger">
       <argument>cache</argument>
+      <call method="pushProcessor">
+        <argument type="service" id="debug.log_processor"/>
+      </call>
+      <call method="pushHandler">
+        <argument type="service" id="monolog.handler.server_log"/>
+      </call>
+      <call method="pushHandler">
+        <argument type="service" id="monolog.handler.console"/>
+      </call>
+      <call method="pushHandler">
+        <argument type="service" id="monolog.handler.main"/>
+      </call>
+    </service>
+    <service id="monolog.logger.templating" class="Symfony\Bridge\Monolog\Logger">
+      <argument>templating</argument>
       <call method="pushProcessor">
         <argument type="service" id="debug.log_processor"/>
       </call>
@@ -5288,7 +5811,7 @@
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
       <argument>EBxq-LMvw5</argument>
       <argument>0</argument>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/pools</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -5297,7 +5820,7 @@
       <argument>SuYgWX8YR3</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/pools</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5305,7 +5828,7 @@
       <argument>WJDvVUPVBF</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/pools</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5313,7 +5836,7 @@
       <argument>XI82z5fylk</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/pools</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5321,7 +5844,7 @@
       <argument>aqCtlTPFTk</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\wamp64\www\kidoPI-DEV\var\cache\dev/pools</argument>
+      <argument>C:/wamp64/www/kidoPI-DEV/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5360,6 +5883,9 @@
     <service id="form.property_accessor" alias="property_accessor" public="false"/>
     <service id="form.choice_list_factory" alias="form.choice_list_factory.cached" public="false"/>
     <service id="Symfony\Component\Asset\Packages" alias="assets.packages" public="false"/>
+    <service id="templating.loader" alias="templating.loader.filesystem" public="true"/>
+    <service id="templating" alias="templating.engine.delegating" public="true"/>
+    <service id="debug.templating.engine.php" alias="templating.engine.php"/>
     <service id="Symfony\Component\Validator\Validator\ValidatorInterface" alias="debug.validator" public="false"/>
     <service id="validator.mapping.class_metadata_factory" alias="debug.validator" public="false"/>
     <service id="translator" alias="translator.data_collector" public="true"/>
@@ -5439,9 +5965,12 @@
     <service id="fos_user.user_manager" alias="fos_user.user_manager.default" public="true"/>
     <service id="fos_user.mailer" alias="fos_user.mailer.twig_swift"/>
     <service id="fos_user.session" alias="session" public="false"/>
-    <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="twig.loader" alias="twig.loader.native_filesystem"/>
+    <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
+    <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
+    <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
+    <service id="twig.loader" alias="twig.loader.filesystem"/>
     <service id="service_locator._fpuy7b" alias="2_ServiceLocator~kexliik" public="false"/>
+    <service id="service_locator.5vqzfm6" alias="templating.engine.php.helpers_locator" public="false"/>
     <service id="service_locator.ml7rum7" alias="1_ServiceLocator~xbkvpd7" public="false"/>
     <service id="validator" alias="debug.validator" public="true"/>
     <service id="translator.logging.inner" alias="translator.default" public="false"/>

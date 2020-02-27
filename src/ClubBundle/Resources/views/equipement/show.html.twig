@@ -6,7 +6,7 @@
     <table class="table table-striped table-bordered nowrap dataTable">
         <tbody>
             <tr>
-                <th>Ideq</th>
+                <th>Id Equipement</th>
                 <td>{{ equipement.ideq }}</td>
             </tr>
             <tr>
@@ -22,10 +22,10 @@
 
     <ul>
         <li>
-            <a href="{{ path('equipement_index') }}">Back to the list</a>
+            <a href="{{ path('equipement_index') }}"class="btn btn-inline">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('equipement_edit', { 'ideq': equipement.ideq }) }}">Edit</a>
+            <a href="{{ path('equipement_edit', { 'ideq': equipement.ideq }) }}"class="btn btn-out-dashed btn-success">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
