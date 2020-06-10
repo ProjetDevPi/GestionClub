@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AjouterequipementController">
+    <stylesheets>
+        <URL value="@ajouterequipement.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="299.0" opacity="0.88" prefHeight="506.0" prefWidth="313.0" style="-fx-background-color: green;">
+         <children>
+            <ImageView fitHeight="211.0" fitWidth="286.0">
+               <image>
+                  <Image url="@../../../../kidoPI-DEV/web/temp/alisena-html.buzline.org/img/logo-white.png" />
+               </image>
+            </ImageView>
+            <Label text="Equipement Edit" textFill="#aff23b" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="35.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="-50.0" />
+         </padding>
+      </VBox>
+      <TextField fx:id="nom" layoutX="145.0" layoutY="105.0" promptText="Nom equipement" />
+      <TextField fx:id="type" layoutX="145.0" layoutY="167.0" promptText="type" />
+      <TextField fx:id="filechoose" disable="true" layoutX="125.0" layoutY="224.0" prefHeight="25.0" prefWidth="94.0" promptText="Image name" />
+      <Button fx:id="chooser" layoutX="223.0" layoutY="224.0" mnemonicParsing="false" onAction="#image" text="choose" />
+      <Button fx:id="add" layoutX="34.0" layoutY="287.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="0.0" prefWidth="94.0" stylesheets="@Button.css" text="Modifier">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="17.0" />
+         </font></Button>
+      <Button fx:id="btn_cancel" layoutX="163.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancel" prefHeight="37.0" prefWidth="87.0" stylesheets="@style.css" text="Cancel">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="18.0" />
+         </font></Button>
+      <TextField fx:id="id" disable="true" layoutX="226.0" layoutY="50.0" opacity="0.46" />
+      <ImageView blendMode="COLOR_BURN" fitHeight="172.0" fitWidth="185.0" focusTraversable="true" layoutX="57.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Downloads/JavaFXApplication5/src/FXML/Preloader.gif" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="10.0" layoutY="105.0" prefHeight="25.0" prefWidth="126.0" text="Nom equipement ">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="166.0" prefHeight="25.0" prefWidth="133.0" text="Type equipement">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="223.0" prefHeight="25.0" prefWidth="78.0" text="Image :">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

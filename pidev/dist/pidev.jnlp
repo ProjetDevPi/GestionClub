@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="pidev.jnlp">
+  <information>
+    <title>pidev</title>
+    <vendor>User</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\itextpdf-5.5.9.jar" size="2287148" download="eager" />
+    <jar href="lib\jPDFNotes.v2019R1.07.jar" size="5818955" download="eager" />
+    <jar href="lib\javax.mail-1.4.4.jar" size="495041" download="eager" />
+    <jar href="lib\jfoenix-8.0.2.jar" size="2442326" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\poi-3.13-20150929.jar" size="2497380" download="eager" />
+    <jar href="lib\poi-examples-3.13-20150929.jar" size="344456" download="eager" />
+    <jar href="lib\poi-excelant-3.13-20150929.jar" size="30520" download="eager" />
+    <jar href="lib\poi-ooxml-3.13-20150929.jar" size="1142386" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-3.13-20150929.jar" size="5641539" download="eager" />
+    <jar href="lib\poi-scratchpad-3.13-20150929.jar" size="1307277" download="eager" />
+    <jar href="lib\spring-security-core-3.2.5.RELEASE.jar" size="366941" download="eager" />
+    <jar href="lib\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
+    <jar href="pidev.jar" size="8107077" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="pidev" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="pidev.Pidev"  name="pidev" />
+  <update check="always"/>
+</jnlp>

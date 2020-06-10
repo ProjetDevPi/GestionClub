@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1427.0" prefWidth="1306.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.HomeController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="49.0" prefWidth="1306.0" styleClass="head-background" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="224.0" layoutY="47.0" text="Kid'O" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="100.0" text="Since 2015" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="53.0" fitWidth="62.0" layoutX="36.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/buterfly-2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <stylesheets>
+            <URL value="@style.css" />
+            <URL value="@../../../Drapo-Dashboard-JavaFX-master/src/drapo/dashboard/style.css" />
+         </stylesheets>
+      </Pane>
+      <ScrollPane layoutX="17.0" layoutY="193.0" prefHeight="1231.0" prefWidth="1274.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="193.0">
+         <content>
+            <VBox fx:id="pnl_scroll" prefHeight="404.0" prefWidth="1306.0" spacing="20.0" style="-fx-background-color: #fff;">
+               <children>
+                  <ImageView fitHeight="43.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/buterfly-2.png" />
+                     </image>
+                  </ImageView>
+               </children></VBox>
+         </content>
+      </ScrollPane>
+      <HBox layoutX="-1.0" layoutY="128.0" prefHeight="40.0" prefWidth="1846.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-539.0">
+         <children>
+            <JFXButton prefHeight="30.0" prefWidth="206.0" ripplerFill="#ee1d1d" text="Home" textFill="#ff0808" underline="true">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="30.0" prefWidth="183.0" text="Inscription" textFill="#ebae29" underline="true">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="30.0" prefWidth="183.0" text="Notebook" textFill="#7bd021" underline="true">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="30.0" prefWidth="116.0" text="Library" textFill="#25cdca" underline="true">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="club" buttonType="RAISED" onAction="#clubs" prefHeight="30.0" prefWidth="178.0" text="Clubs" textFill="#eb17cf" underline="true">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="30.0" prefWidth="146.0" text="Events" textFill="#ee1669" underline="true">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="30.0" prefWidth="123.0" text="Canteen" textFill="#e7eb09" underline="true">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="30.0" prefWidth="171.0" text="About us" textFill="#8d2184" underline="true">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <ImageView fitHeight="50.0" fitWidth="240.0" layoutX="18.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/log.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="360.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+216 71 293 658" wrappingWidth="153.13671875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="360.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+216  97 293 658" wrappingWidth="153.13671875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="577.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tunis ,El Ghazella" wrappingWidth="147.000013589859" />
+      <Text layoutX="578.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="38 Rue,Ibn Moataz" wrappingWidth="153.13671875" />
+      <Text layoutX="823.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kido@gmail.com" />
+      <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="332.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/call.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="62.0" layoutX="548.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/geo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="39.0" layoutX="793.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/message.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="99.0" layoutX="1218.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/caterpillar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="68.0" layoutX="1000.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/profile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="62.0" layoutX="1111.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/login.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="86.0" layoutX="897.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/bird-2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

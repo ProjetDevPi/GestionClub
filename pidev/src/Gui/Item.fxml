@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="399.0" prefWidth="1197.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ItemController">
+   <children>
+      <ImageView fx:id="imageview1" fitHeight="388.0" fitWidth="1127.0" layoutX="52.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/bebe.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageview2" fitHeight="399.0" fitWidth="1127.0" layoutX="52.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/fille.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1098.0" layoutY="165.0" onAction="#image" prefHeight="25.0" prefWidth="81.0" text="o" />
+      <ImageView fitHeight="49.0" fitWidth="38.0" layoutX="1126.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/fast-forward.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="51.0" layoutY="187.0" onAction="#back" prefHeight="25.0" prefWidth="73.0" text="b" />
+      <ImageView fitHeight="38.0" fitWidth="53.0" layoutX="60.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

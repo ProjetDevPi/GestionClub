@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="399.0" prefWidth="1197.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fill="#ff9000" layoutX="342.0" layoutY="50.0" radius="28.0" stroke="#eba70e" strokeType="INSIDE" />
+      <Circle fill="#ff2190" layoutX="560.0" layoutY="50.0" radius="28.0" stroke="#fa11c7" strokeType="INSIDE" />
+      <Circle fill="#1fccff" layoutX="785.0" layoutY="50.0" radius="28.0" stroke="#16d3e4" strokeType="INSIDE" />
+      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="325.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/baby-food.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="56.0" layoutX="545.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/paper-plane.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="770.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/rocket.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="382.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Learning &amp; Fun" wrappingWidth="132.13671875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="597.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Healthy Meal" wrappingWidth="132.13671875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="822.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expert Teachers" wrappingWidth="132.13671875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="242.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/about-prev.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="506.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/benefits-prev.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="280.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Us" wrappingWidth="109.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="536.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our Benefits" wrappingWidth="121.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="19.0" fitWidth="49.0" layoutX="505.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../icons/startup.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="532.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Education games and activities" wrappingWidth="192.13671875" />
+      <ImageView fitHeight="19.0" fitWidth="49.0" layoutX="501.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../icons/startup.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="532.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Music activities for all" wrappingWidth="192.13671875" />
+      <ImageView fitHeight="19.0" fitWidth="49.0" layoutX="499.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../icons/startup.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="532.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We put children first" wrappingWidth="192.13671875" />
+      <ImageView fitHeight="19.0" fitWidth="49.0" layoutX="496.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../icons/startup.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="532.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Learning languages" wrappingWidth="192.13671875" />
+      <ImageView fitHeight="285.0" fitWidth="225.0" layoutX="742.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/corona.png" />
+         </image>
+      </ImageView>
+      <Text fill="#f80000" layoutX="243.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kido  " wrappingWidth="33.333348870277405">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="275.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gives children the opportunity to grow" wrappingWidth="218.13673195242882" />
+      <Text layoutX="243.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="and develop through play - the way children" wrappingWidth="241.13671875" />
+      <Text layoutX="242.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="learn best." />
+      <ImageView fitHeight="247.0" fitWidth="126.0" layoutX="1008.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/ballon_2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="111.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/bird.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="133.0" fitWidth="109.0" layoutX="14.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/bird-2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
